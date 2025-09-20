@@ -1,0 +1,116 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
+    "Droid Sans", "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #f5f5f5;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8;
+}
+
+/* Responsive table improvements */
+.MuiTableContainer-root {
+  overflow-x: auto;
+}
+
+@media (max-width: 768px) {
+  .MuiTableCell-root {
+    padding: 8px 4px;
+    font-size: 0.875rem;
+  }
+
+  .MuiTableCell-head {
+    font-weight: 600;
+  }
+}
+
+/* Chart responsiveness */
+.echarts-for-react {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+/* Loading animation */
+@keyframes pulse {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.loading-pulse {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Card hover effects */
+.MuiCard-root {
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.MuiCard-root:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
+}
+
+/* Button improvements */
+.MuiButton-root {
+  transition: all 0.2s ease-in-out;
+}
+
+/* Mobile-first responsive adjustments */
+@media (max-width: 600px) {
+  .MuiContainer-root {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .MuiTypography-h4 {
+    font-size: 1.75rem;
+  }
+
+  .MuiCard-root {
+    margin-bottom: 16px;
+  }
+}
+
+/* Print styles */
+@media print {
+  .MuiAppBar-root,
+  .MuiDrawer-root,
+  .MuiButton-root {
+    display: none !important;
+  }
+
+  .MuiContainer-root {
+    max-width: none !important;
+    padding: 0 !important;
+  }
+}
